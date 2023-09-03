@@ -1,6 +1,7 @@
 require("theprimeagen.set")
 require("theprimeagen.remap")
 require("theprimeagen.packer")
+require("theprimeagen.runner")
 
 -- DO NOT INCLUDE THIS
 vim.opt.rtp:append("~/personal/streamer-tools")
