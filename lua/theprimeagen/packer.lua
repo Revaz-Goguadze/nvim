@@ -81,8 +81,10 @@ return require('packer').startup(function(use)
 			"nvim-lua/plenary.nvim",
 		},
 	})
-  use {"akinsho/toggleterm.nvim", tag = '*'}
   use("windwp/windline.nvim")
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
 
 end)
 

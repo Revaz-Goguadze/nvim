@@ -52,4 +52,3 @@ end
 
 -- Map the function to a keybinding
 vim.api.nvim_set_keymap("n", "<leader>r", ":lua run_language()<CR>", { noremap = true, silent = true })
-
