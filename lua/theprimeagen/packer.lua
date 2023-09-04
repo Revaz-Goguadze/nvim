@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
-  use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
 
   use {
@@ -72,7 +71,18 @@ return require('packer').startup(function(use)
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
+
+  -- added by me
+  use("lewis6991/gitsigns.nvim")
+  use({
+    	"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+  use {"akinsho/toggleterm.nvim", tag = '*'}
+  use("windwp/windline.nvim")
 
 end)
 
