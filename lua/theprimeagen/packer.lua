@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
 			-- or just leave it empty :)
 		 }
 	end,
-})
+  })
+  use('barrett-ruth/live-server.nvim')
 end)
 
