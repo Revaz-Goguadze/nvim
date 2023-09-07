@@ -1,4 +1,4 @@
-# 🌟 Nvim Based On ThePrimeagen's Configuration 🌟
+# 🌟 Nvim Based On ThePrimeagen's Config 🌟
 
 For the original repository, visit [ThePrimeagen](https://github.com/ThePrimeagen/init.lua).
 
