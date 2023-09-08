@@ -29,7 +29,9 @@ elseif filetype == "cs" then
     cmd = "bash %"
     elseif filetype == "lua" then
     cmd = "lua %"
-    else
+  elseif filetype == "rust" then
+    cmd = "cargo build && cargo run"
+  else
     print("Unsupported filetype")
     return
   end
