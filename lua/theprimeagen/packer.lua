@@ -98,4 +98,5 @@ use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = fun
 use ('m4xshen/autoclose.nvim')
 use ("lukas-reineke/indent-blankline.nvim")
 use ('norcalli/nvim-colorizer.lua')
+use ('alvan/vim-closetag')
 end)
