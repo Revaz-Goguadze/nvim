@@ -96,5 +96,6 @@ return require('packer').startup(function(use)
   -- install without yarn or npm
 use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 use ('m4xshen/autoclose.nvim')
+use "lukas-reineke/indent-blankline.nvim"
 end)
 
