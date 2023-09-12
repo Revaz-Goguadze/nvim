@@ -31,6 +31,8 @@ elseif filetype == "cs" then
     cmd = "lua %"
   elseif filetype == "rust" then
     cmd = "cargo build && cargo run"
+  elseif filetype == "typescript" then
+    cmd = "bun run %"
   else
     print("Unsupported filetype")
     return

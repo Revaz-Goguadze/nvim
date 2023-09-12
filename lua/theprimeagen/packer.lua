@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("nvim-treesitter/nvim-treesitter-context");
 
+  -- LSP and Autocompletion
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -101,4 +102,5 @@ use ('norcalli/nvim-colorizer.lua')
 use ('alvan/vim-closetag')
 use('jose-elias-alvarez/null-ls.nvim')
 use('MunifTanjim/prettier.nvim')
+use ('wfxr/minimap.vim')
 end)
