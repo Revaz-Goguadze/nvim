@@ -50,4 +50,6 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_exec([[
+set clipboard+=unnamedplus
+]], false)
