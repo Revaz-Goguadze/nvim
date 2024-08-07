@@ -1,4 +1,4 @@
-function run_language()
+function Run_language()
   -- Get the filetype of the current buffer
   local filetype = vim.bo.filetype
 
@@ -8,11 +8,13 @@ function run_language()
     cmd = "python %"
   elseif filetype == "cpp" then
     cmd = "g++ -o output % && ./output"
+  elseif filetype == "javascript" then
+    cmd = "node %"
   elseif filetype == "java" then
- cmd = "javac % && java "
-elseif filetype == "cs" then
-  local filename = vim.fn.expand("%:t:r")
-  cmd = "mcs " .. "%" .. " && mono " .. filename .. ".exe"
+    cmd = "javac % && java "
+  elseif filetype == "cs" then
+    local filename = vim.fn.expand("%:t:r")
+    cmd = "mcs " .. "%" .. " && mono " .. filename .. ".exe"
   elseif filetype == "ocaml" then
     cmd = "utop"
     local filename = vim.fn.expand("%:p")
@@ -53,6 +55,3 @@ elseif filetype == "cs" then
   -- Turn on insert mode
   vim.api.nvim_command("startinsert")
 end
-
--- Map the function to a keybinding
-vim.api.nvim_set_keymap("n", "<leader>r", ":lua run_language()<CR>", { noremap = true, silent = true })

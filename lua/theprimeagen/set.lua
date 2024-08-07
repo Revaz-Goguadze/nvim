@@ -30,3 +30,16 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+
+--> custom
+
+--vim.cmd()
+vim.opt.clipboard = 'unnamedplus'
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+
+
+-- Set colorscheme
+--vim.cmd [[colorscheme onedark]]
+-- vim.cmd.colorscheme "catppuccin
