@@ -6,7 +6,10 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use 'preservim/nerdtree'
+    use 'numToStr/Comment.nvim'
 
+    use {'folke/which-key.nvim'}
     use {
         'folke/noice.nvim',
         requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' }
@@ -90,15 +93,15 @@ return require('packer').startup(function(use)
         },
     })
     use("akinsho/toggleterm.nvim")
-    use({
-        "Pocco81/auto-save.nvim",
-        config = function()
-            require("auto-save").setup {
-                -- your config goes here
-                -- or just leave it empty :)
-            }
-        end,
-    })
+    -- use({
+    --     "Pocco81/auto-save.nvim",
+    --     config = function()
+    --         require("auto-save").setup {
+    --             -- your config goes here
+    --             -- or just leave it empty :)
+    --         }
+    --     end,
+    -- })
     use('barrett-ruth/live-server.nvim')
     -- install without yarn or npm
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = {
@@ -111,4 +114,5 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
     use('wfxr/minimap.vim')
     use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
+    use('jayp0521/mason-nvim-dap.nvim')
 end)
